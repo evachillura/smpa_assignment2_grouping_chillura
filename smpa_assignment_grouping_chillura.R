@@ -36,14 +36,12 @@ impeach %>%
   group_by(for_impeachment, gdp_above_national) %>% 
   summarise(n())
 
-
 # 3) Now do the same as #2, but this time instead of GDP look at above/below 
 # the national avg percent of college graduates (pct_bachelors_compared_to_national)
 
 impeach %>% 
   group_by(for_impeachment, pct_bachelors_compared_to_national) %>% 
   summarise(n())
-
 
 # 4) Instead of showing the above/below national average counts for those for or 
 # against impeachment, this time show the combined MEAN percentage of college
@@ -53,7 +51,6 @@ impeach %>%
   group_by(for_impeachment) %>% 
   summarise(grads_for_impeachment = mean(pct_bachelors))
 
-
 # 5) Do the same as #4, but this time show the combined MEAN percentage of 
 # the vote that Donald Trump received for districts that are Yes for 
 # impeachment vs. No
@@ -61,7 +58,6 @@ impeach %>%
 impeach %>% 
   group_by(for_impeachment) %>% 
   summarise(trump_voters_for_impeachment = mean(trump_percent))
-
 
 # 6) Filter out only the members who are a yes for impeachment, 
 # then of those how many won their 2018 election by less than
@@ -71,7 +67,6 @@ impeach %>%
   filter(for_impeachment == "YES") %>% 
   group_by(margin_flag_2018) %>% 
   summarise(n())
-
 
 ### For these next questions, we'll use a built-in dataset from ggplot2
 # that contains different cars and their fuel efficiency (miles-per-gallon)
@@ -110,7 +105,6 @@ mpgdata %>%
   group_by(year) %>% 
   summarise(avg_hwy = mean(hwy))
 
-
 # 10) Now this time, build on #9 and include the means for both highway
 # and city (the "cty" column). Give each column its own name of your choosing 
 # as well.
@@ -118,7 +112,6 @@ mpgdata %>%
 mpgdata %>% 
   group_by(year) %>% 
   summarise(avg_hwy = mean(hwy), avg_cty = mean(cty))
-
 
 # 11) Determine the mean highway mileage for each manufacturer in the dataset,
 # and then sort the results from highest to lowest, so we can see which company
