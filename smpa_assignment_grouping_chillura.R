@@ -24,8 +24,8 @@ impeach %>%
   group_by(for_impeachment, gdp_above_national) %>% 
   summarise(n())
 
-# 7 members of the dataset who do not favor impeachment come from districts with
-# a GDP that is above the national figure.
+    # 7 members of the dataset who do not favor impeachment come from districts with
+    # a GDP that is above the national figure.
 
 # 2) Answer this question using grouping.
 # Similar to #1 above, now break down the members of Congress by TWO measures:
@@ -86,7 +86,7 @@ view(mpgdata)
 mpgdata %>% 
   count(manufacturer) 
 
-# There are 15 different car manufacturers in this dataframe.
+    # There are 15 different car manufacturers in this dataframe.
 
 # 8) Similarly, let's see how many years this data covers?
 # This time, do a count on the "year" column. The results should give you a big
@@ -95,8 +95,8 @@ mpgdata %>%
 mpgdata %>% 
   count(year)
 
-# The data only covers two years -- 1999 and 2008 -- so this data can be used to 
-# compare and contrast between the years which are 9 years apart by grouping.
+    # The data only covers two years -- 1999 and 2008 -- so this data can be used to 
+    # compare and contrast between the years which are 9 years apart by grouping.
 
 # 9) Using group_by() and summarise(), create a code chunk that shows the mean 
 # highway mileage for each year (the "hwy" column). 
